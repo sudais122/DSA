@@ -1,17 +1,18 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 int main() {
-    int arr[5] = {12,3,21,12,33};
+    int arr[100] = {10, 20, 30, 40, 50};
+    int n = 5;
+    int index = 2; // delete element at index 2 (30)
 
-    int elme;
-    cout << "Enter Element";
-    cin >> elme;
-
-    for (int i = 0; i < 1; i++)
-    {
-        /* code */
+    for (int i = index; i < n - 1; i++) {
+        arr[i] = arr[i + 1];
     }
-    
-    return 0;
+    n--; // reduce size
+
+    // print updated array
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
 }

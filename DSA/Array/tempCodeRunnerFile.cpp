@@ -1,1 +1,2 @@
-    cout << *(a+1) <<endl;
+    // cout << &a[0][0]<<endl;
+    // cout << &a;
