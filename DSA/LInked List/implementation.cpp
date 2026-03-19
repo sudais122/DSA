@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-
+//it also tell how to insert at start of th elink list
 struct node{
     int data; // creta a var that store the adress of a new varible
     node*next; // create the pointe of tehtype node that is user define datatype 
@@ -13,13 +13,13 @@ void insertatBegining(int val){
     //type node that store the two thing
     
     newnode->data = val; //the data in newndnoe point the value that is stored
-    newnode->next = nullptr; //we point it to the null b/c we have the only one element 
+    newnode->next = head; //we point it to the null b/c we have the only one element 
     head = newnode;// when we push the element int the begining then we set the
     //head alway to ist node which is new
 };
 
 void display(){
-    node*temp = head; //every time loop run it reset the head value to the ist elemtn always
+    node*temp = head; //it copy teh all values of the head pointer
     while (temp != nullptr) //it run until the templ value is not null menas when the loop reach to last element
     //the last element always point to the null 
     {
@@ -29,7 +29,9 @@ void display(){
     
 }
 int main() {
-    insertatBegining(10);
+    insertatBegining(25);
+    insertatBegining(30);
+    insertatBegining(35);
     display();
     return 0;
 }

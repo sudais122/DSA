@@ -1,0 +1,17 @@
+start
+creat struct node with data type int and poniter next of te type node
+create a head pointe node*next = NULL
+crate a function insert() at start
+craete newnode node*newnode = new node
+now point the data node->data = val
+also point the next node->head = next
+update the head = newnode
+creat a function Display()
+declare a var temp copy values of head node*temp = head
+run while loop with cindition (temp != nullptr)
+print the data temp->data
+update the head head = temp->next;
+in main function call the function insert()
+and then call the Display
+stop
+
