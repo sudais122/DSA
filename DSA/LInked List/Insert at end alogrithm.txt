@@ -1,1 +1,19 @@
 start
+ist create struct node with data nad node poiter 
+create a head pointer node*head = NULL;
+cretae a function insertatend(int value);
+cretae newnode node*newnode = head;
+point the value and pointer
+    newnode->head = val;
+    newnode->next = nullptr
+if the linklist is enpty
+    head == nullptr
+    head == newnode;
+    return
+traverse all element of the node 
+    temp->next !=null
+    temp-> next
+assign teh newnode to last
+    temp->next = newnode
+then traverse all teh elemetn of the linklist
+stop
