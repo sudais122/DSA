@@ -14,7 +14,7 @@ void InsertAtBegin(int val){
     newnode->next = head;
     head = newnode;
 };
-void DeletatEnd(){
+void DeleteSpecific(int pos){
     if (head == nullptr)
     {
         cout << "Linked List is empty the nothing to delete"<<endl;
@@ -29,12 +29,13 @@ void DeletatEnd(){
     
     Node*temp = head;
 
-    while (temp->next->next !=nullptr)
+    for (int i = 1; i < pos-1 && temp != nullptr; i++)
     {
         temp = temp->next;
     }
+    Node*next = temp->next->next;
     delete temp->next;
-    temp->next = nullptr;
+    temp->next = next;
 }
 void Print(){
     cout << "Link list elements are:" << " ";
@@ -52,7 +53,7 @@ int main() {
     InsertAtBegin(3);
     InsertAtBegin(4);
     InsertAtBegin(5);
-    DeletatEnd();
+    DeleteSpecific(3);
     Print();
     return 0;
 }

@@ -14,37 +14,25 @@ void InsertAtBegin(int val){
     newnode->next = head;
     head = newnode;
 };
-void DeletatEnd(){
-    if (head == nullptr)
-    {
-        cout << "Linked List is empty the nothing to delete"<<endl;
-        return;
-    }
-    if (head->next == nullptr)
-    { 
-        delete head;
-        head = nullptr; 
-        return;
-    }
-    
-    Node*temp = head;
-
-    while (temp->next->next !=nullptr)
-    {
-        temp = temp->next;
-    }
-    delete temp->next;
-    temp->next = nullptr;
-}
 void Print(){
     cout << "Link list elements are:" << " ";
     Node*temp = head;
-
+    
     while (temp != nullptr)
     {
         cout << temp->data <<" ";
         temp = temp->next;
     }
+}
+void findLength(){
+    int count =0 ;
+    Node*temp = head;
+    while (temp != nullptr)
+    {
+        temp = temp->next;
+        count++;
+    } 
+    cout << "Length of List is: "<<count <<endl;
 }
 int main() {
     InsertAtBegin(1);
@@ -52,7 +40,7 @@ int main() {
     InsertAtBegin(3);
     InsertAtBegin(4);
     InsertAtBegin(5);
-    DeletatEnd();
+    findLength();
     Print();
     return 0;
 }

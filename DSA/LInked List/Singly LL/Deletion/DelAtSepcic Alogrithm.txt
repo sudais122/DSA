@@ -1,0 +1,15 @@
+we direct start with the function
+start
+creat a function DelAtSepcic(int val)
+check the empty linkdlist   
+    head == null
+check only one element inthe linkdlist
+creat a new pointer to node 
+    node*temp = head;
+run the for loop to pos-1
+hold the vale after teh pos
+    node*next = temp->next->next
+delete the element 
+    delete temp->next
+connect the elements
+    temp->next =  next;
