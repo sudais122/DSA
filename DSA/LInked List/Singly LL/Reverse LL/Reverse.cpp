@@ -48,7 +48,7 @@ void reverse(Node*& head) {
         curr = next;        // move curr forward
     }
 
-    head = prev;  // new head of revers ed list
+    head = prev;  // new head of reversed list
 }
 
 int main() {

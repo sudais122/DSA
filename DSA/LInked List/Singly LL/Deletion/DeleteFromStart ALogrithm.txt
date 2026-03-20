@@ -1,0 +1,11 @@
+we direct strat writing the alogrith of the functin insert at start
+strat
+creat function with the name insertatstart();
+ist chech if teh list is null 
+    head == null
+creat a newnode
+then update the value of head
+    head = head->next;
+we delete the value of the old head  which is temp
+    delete temp
+stop

@@ -1,0 +1,16 @@
+we direct start from the function
+start
+declare a function name deletefromend();
+check if the lsit if empty
+    head == null
+check of teh list has only one elem
+    head == nullptr
+    delete head
+    head == nullptr
+now creat a temp poniter
+run a while loop up to second last element
+    temp->next-> != nullptr
+    temp= temp->next;
+delete the temp pointer
+update the nullptr to temp->next 
+stop
