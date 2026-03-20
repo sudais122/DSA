@@ -1,0 +1,22 @@
+we directly strat from the fun insert at the specifci pos
+start
+create a function insertatspecifpos()
+pass 2 parameters insertatspecifpos(int pos,int elem);
+now craete newnode node*newnode = new node;
+point the val to new node 
+    newnode->data = elem;
+    newnode->next = nullptr;
+hamdle teh situation to insert at positin insert    
+    pos ==1
+    newnode>next = head;
+    head = newnode;
+now create a newprt val of the type node
+run a loop to pos - 1;
+then after this handle teh invalid position
+    temp == nullptr
+now we want to link the node to just after the newnode
+    newnode->next = temp->next
+now we want link the pre one
+    temp->next = newnode
+and then write teh display function
+end

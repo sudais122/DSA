@@ -23,9 +23,8 @@ void insertatend(int val){
     node*temp = head;
     while (temp->next !=nullptr)//this syntax is used to find th last node in the list we always write the temp->next
     {
-        temp->next; // it dont print teh last element in which it points to the nullptr
+        temp = temp->next; // it dont print teh last element in which it points to the nullptr
     }
-    
     temp->next = newnode;  
 
 }
@@ -40,6 +39,9 @@ void display(){
     }
 }
 int main() {
-    
+    insertatend(10);
+    insertatend(14);
+    insertatend(89);
+    display();
     return 0;
 }
