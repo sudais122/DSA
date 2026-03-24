@@ -1,0 +1,16 @@
+we direct write teh fuction for insert at start
+start
+create new function insertatstart(int value) and pass an arguments
+create nwenode
+assign all value like 
+    newnnode->data = val;
+    nwenode->pre = null;
+    nwenode->next = head
+now this is the case when the Dll os empty
+when the Dll has the elements 
+so handle that
+    if(had != null)
+update the pre value and point it to the nwenode
+update the head point it to the head
+now create a function print()
+stop
