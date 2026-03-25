@@ -26,11 +26,10 @@ void insertatspcific(int pos,int val){
     {
         newnode->pre = nullptr;
         newnode->next = head;
-        head= newnode;
         return;
-    } 
+    }
     
-    for (int i = 1; i < pos-1 && temp != nullptr; i++)
+    for (int i = 0; i < pos-1 && temp != nullptr; i++)
     {
         temp = temp->next;
     }
