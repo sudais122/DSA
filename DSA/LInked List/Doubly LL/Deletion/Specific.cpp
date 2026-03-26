@@ -34,7 +34,7 @@ void deleterspecific(int pos){
     if (pos == 1)
     {
         delete head;
-        head = temp->next;
+        head = head->next;
         return;
     }
     
@@ -56,6 +56,8 @@ void print(){
 }
 int main() {
     insetatstart(45);
+    insetatstart(50);
+    deleterspecific(1);
     print();
     return 0;
 }
