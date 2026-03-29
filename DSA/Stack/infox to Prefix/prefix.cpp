@@ -1,12 +1,13 @@
 #include <iostream>
 #include <stack>
+#include <algorithm> // for reverse
 using namespace std;
 
-// Function to check precedence
+// Function to return precedence of operators
 int precedence(char op) {
     if (op == '^') return 3;
-    if (op == '+' || op == '-') return 1;
     if (op == '*' || op == '/') return 2;
+    if (op == '+' || op == '-') return 1;
     return 0;
 }
 
@@ -15,29 +16,20 @@ string infixToPostfix(string infix) {
     stack<char> st;
     string postfix = "";
 
-    for (int i = 0; i < infix.length(); i++) {
-        char ch = infix[i];
-
-        // 1. Operand → add to result
+    for (char ch : infix) {
         if (isalnum(ch)) {
             postfix += ch;
         }
-
-        // 2. Opening bracket → push
         else if (ch == '(') {
             st.push(ch);
         }
-
-        // 3. Closing bracket → pop until '('
         else if (ch == ')') {
             while (!st.empty() && st.top() != '(') {
                 postfix += st.top();
                 st.pop();
             }
-            st.pop(); // remove '('
+            st.pop();
         }
-
-        // 4. Operator
         else {
             while (!st.empty() && precedence(st.top()) >= precedence(ch)) {
                 postfix += st.top();
@@ -47,7 +39,6 @@ string infixToPostfix(string infix) {
         }
     }
 
-    // 5. Pop remaining operators 
     while (!st.empty()) {
         postfix += st.top();
         st.pop();
@@ -56,12 +47,28 @@ string infixToPostfix(string infix) {
     return postfix;
 }
 
+// Function to convert infix to prefix
+string infixToPrefix(string infix) {
+    // Step 1: Reverse the infix expression
+    reverse(infix.begin(), infix.end());
+
+    // Step 2: Swap '(' with ')' and vice versa
+    for (int i = 0; i < infix.size(); i++) {
+        if (infix[i] == '(') infix[i] = ')';
+        else if (infix[i] == ')') infix[i] = '(';
+    }
+
+    // Step 3: Get postfix of modified expression
+    string postfix = infixToPostfix(infix);
+
+    // Step 4: Reverse postfix to get prefix
+    reverse(postfix.begin(), postfix.end());
+
+    return postfix;
+}
+
 int main() {
-    string infix;
-    cout << "Enter infix expression: ";
-    cin >> infix;
-
-    cout << "Postfix: " << infixToPostfix(infix);
-
+    string infix = "(A+B)*C-D";
+    cout << "Prefix: " << infixToPrefix(infix) << endl;
     return 0;
 }
