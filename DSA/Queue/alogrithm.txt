@@ -1,0 +1,31 @@
+start
+check if teh queue is full if full exit
+if teh queu is empty upate value from -1 to 0
+take input fom user to insert
+incresement teh reat value
+insert teh value
+stop
+
+pseudo code
+if(rear == size -1) array is empty
+else 
+    check if pos is -1 upadte to 0
+    enter value to insert 5
+    rear++
+    insert value in queue
+    queue[rear] = x
+stop
+
+//delete the element form queue
+start
+check queue has not empty 
+show the element removed
+incresement front
+stop
+
+pseudo code
+    if(front == -1) queue empty
+else
+    show the remove element
+    front++
+stop
