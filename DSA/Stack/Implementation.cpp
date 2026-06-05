@@ -8,7 +8,8 @@ void push(int x){
     { 
         cout << "Stack is full";
     }
-    else{
+    else
+    {
         top++;
         Stack [top] = x;
     }
